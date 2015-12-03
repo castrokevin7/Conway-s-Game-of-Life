@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Game of Life</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<link rel="shortcut icon" href="/images/ico/favicon.ico">
+	</head>
+	<body onload="init()">
+		<h1>Conway's Game of Life</h1>		
+		<div class="container">
+			<canvas id="flag" width="10" height="10"></canvas>
+			<button onclick="playGame()">Play</button>
+			<button onclick="stopGame()">Stop</button>
+			<button onclick="stepGame()">Step</button>
+			<button onclick="clearMap()">Clear</button>			
+			<button class="map" onclick="randomMap()">Random</button>
+			<button onclick="horizontalLine()">Horizontal</button>
+			<button onclick="verticalLine()">Vertical</button>
+
+			<select id="selector">
+				<option value="0">Cell</option>
+				<option value="1">Gosper G. Gun</option>
+				<option value="2">Small Exploder</option>
+				<option value="3">Exploder</option>
+				<option value="4">Spaceship</option>
+				<option value="5">Glider</option>
+				<option value="6">10 Cell Row</option>
+				<option value="7">Kok's Galaxy</option>
+				<option value="8">Small Nova</option>
+				<option value="9">Nova</option>
+				<option value="10">Granade Tiki</option>
+			</select>
+			<!--
+			<button class="turn" onclick="turnLeft()">Turn Left</button>
+			<button class="turn" onclick="turnRight()">Turn Right</button>
+			-->
+		</div>		
+		<canvas id="map" width="1200" height="600"></canvas> 
+		<script type='text/javascript' src='js/gameOfLife.js'></script>
+	</body>
+</html>

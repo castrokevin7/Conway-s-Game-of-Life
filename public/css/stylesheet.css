@@ -1,0 +1,72 @@
+
+html, body, header, h1 {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+body {
+	padding-top: 10px;
+	background: #FFFFFF url(../images/background/pw_maze_black.png) top left repeat;
+}
+
+h1 {
+	font-family: "Open Sans Regular", "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+	font-size: 40px;
+	text-shadow: 2px 2px 2px gray;
+	text-align: center;
+	color: white;
+}
+
+#map {
+	display: block;
+	margin: 10px auto 0 auto;
+	border: 4px solid white;
+}
+
+#flag {	
+	border-radius: 50%;
+	margin-right: 20px;
+}
+
+.container {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.container button {
+	width: 80px;
+	height: 30px;
+	border-radius: 4px;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.container #selector {
+	width: 150px;
+	height: 30px;
+	border-radius: 4px;	
+	display: inline-block;
+	font-weight: bold;
+}
+
+.container .turn {
+	width: 150px;
+	height: 30px;
+	border-radius: 4px;	
+	display: inline-block;
+	font-weight: bold;
+}
+
+.container button:hover {
+	color: red;
+}
+
+.map {
+	margin-left: 50px;
+}
+
