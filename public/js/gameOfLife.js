@@ -70,7 +70,17 @@ var figuresCollection = [
   [0,0,0],
   [1,1,1],
   [1,1,1],
-  [1,1,1]]
+  [1,1,1]],
+// Diamond.
+[[0,0,0,0,1,1,1,1,0,0,0,0],
+ [0,0,0,0,0,0,0,0,0,0,0,0],
+ [0,0,1,1,1,1,1,1,1,1,0,0],
+ [0,0,0,0,0,0,0,0,0,0,0,0],
+ [1,1,1,1,1,1,1,1,1,1,1,1],
+ [0,0,0,0,0,0,0,0,0,0,0,0],
+ [0,0,1,1,1,1,1,1,1,1,0,0],
+ [0,0,0,0,0,0,0,0,0,0,0,0],
+ [0,0,0,0,1,1,1,1,0,0,0,0]]
 ]; 
 
 // Game functionality.
@@ -157,7 +167,7 @@ ctxFlag.fillRect(0, 0, canvasFlag.width, canvasFlag.height);
 var cellSize = 5, 
 	cellColor = "red",
 	aliveCells = 3000,
-	drawTiming = 100;
+	drawTiming = 50;
 	
 var height = Math.floor(canvasMap.height / cellSize);
 var width = Math.floor(canvasMap.width / cellSize);

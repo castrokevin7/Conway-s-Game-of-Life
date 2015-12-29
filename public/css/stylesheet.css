@@ -39,7 +39,7 @@ h1 {
 }
 
 .container button {
-	width: 80px;
+	width: 100px;
 	height: 30px;
 	border-radius: 4px;
 	display: inline-block;
@@ -47,14 +47,6 @@ h1 {
 }
 
 .container #selector {
-	width: 150px;
-	height: 30px;
-	border-radius: 4px;	
-	display: inline-block;
-	font-weight: bold;
-}
-
-.container .turn {
 	width: 150px;
 	height: 30px;
 	border-radius: 4px;	
