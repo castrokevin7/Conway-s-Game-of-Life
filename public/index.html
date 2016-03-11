@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 	<head>
 		<title>The Game of Life</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<link rel="shortcut icon" href="images/ico/favicon.ico">
 	</head>
-	<body ng-controller="mainController">
+	<body onload="init()">
 		<h1>Conway's Game of Life</h1>		
-		<div class="container" ng-init="init()">
+		<div class="container">
 			<canvas id="flag" width="10" height="10"></canvas>
 			<button onclick="playGame()">Play</button>
 			<button onclick="stopGame()">Stop</button>
@@ -17,8 +16,7 @@
 			<button onclick="clearMap()">Clear</button>			
 			<button class="map" onclick="randomMap()">Random</button>
 			<button onclick="horizontalLine()">Horizontal</button>
-			<button ng-click="init()">Vertical</button>
-
+			<button onclick="verticalLine()">Vertical</button>
 			<select id="selector">
 				<option value="0">Cell</option>
 				<option value="1">Gosper G. Gun</option>
@@ -33,11 +31,10 @@
 				<option value="10">Granade Tiki</option>
 				<option value="11">Diamond</option>
 			</select>
-
 			<canvas id="map" width="1200" height="600"></canvas> 
 		</div>		
-		<script type="text/javascript" src="js/angular/angular.min.js"></script>
-		<script type="text/javascript" src="js/controller.js"></script>
-		<!--<script type='text/javascript' src='js/gameOfLife.js'></script>-->
+		<!--<script type="text/javascript" src="js/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>-->
+		<script type='text/javascript' src='js/gameOfLife.js'></script>
 	</body>
 </html>

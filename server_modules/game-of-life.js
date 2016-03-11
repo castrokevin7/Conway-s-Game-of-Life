@@ -61,6 +61,29 @@ function evolveMap(map, defaultMap) {
 	return next;
 }	
 
+function horizontalLine(map) {
+	for (var colum = 0; colum < width; colum++) {
+		map[Math.floor(height / 2)][colum] = 1;
+	}	
+	return map;
+}
+
+function verticalLine(map) {
+	for (var row = 0; row < height; row++) {
+		map[row][Math.floor(width / 2)] = 1;
+	}	
+	return map;
+}
+
+function drawFigure(map, x, y, figure) {
+	for (var i = 0; i < figure.length; i++) {
+		for (var j = 0; j < figure[0].length; j++) {
+			map[i + y][j + x] = figure[i][j]; 
+		};
+	};
+	return map;
+}
+
 var result = { value: null };
 module.exports = function (app) {
 
@@ -70,7 +93,7 @@ module.exports = function (app) {
 	});
 
 	app.post('/getRandomMap', function (request, response) {
-		result.value = getBlankMap(request.body.map, request.body.random);
+		result.value = getRandomMap(request.body.map, request.body.random);
 		response.json(result);
 	});
 
@@ -78,4 +101,19 @@ module.exports = function (app) {
 		result.value = evolveMap(request.body.map, request.body.blank);
 		response.json(result);
 	});
+
+	app.post('/drawHorizontal', function (request, response) {
+		result.value = drawHorizontal(request.body.map);
+		response.json(result);
+	});
+
+	app.post('/drawHorizontal', function (request, response) {
+		result.value = drawHorizontal(request.body.map);
+		response.json(result);
+	});
+
+	app.post('/drawFigure', function (request, response) {
+		result.value = drawFigure(request.body.map, request.body.x, request.body.y, request.body.figure);
+		response.json(result);
+	});	
 };
